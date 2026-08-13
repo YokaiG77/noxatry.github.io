@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALIENOR — NoxaTry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <img class="site-logo" src="../assets/images/NoxaTry_logo.png" alt="NoxaTry">
+    <nav class="nav-wrap">
+      <div class="nav-box">
+        <button class="mobile-toggle" id="menuToggle" aria-expanded="false" aria-controls="navItems">
+          <span id="menuArrow">▼</span> MENU
+        </button>
+        <div class="nav-items" id="navItems">
+          <a class="nav-item" href="../index.html"><span class="cursor"></span>ACCUEIL</a>
+          <a class="nav-item" href="../jeu.html"><span class="cursor"></span>JEU</a>
+          <a class="nav-item" href="../equipe.html"><span class="cursor"></span>EQUIPE</a>
+          <a class="nav-item" href="../devlog.html"><span class="cursor"></span>DEVLOG</a>
+          <a class="nav-item" href="../contact.html"><span class="cursor"></span>CONTACT</a>
+        </div>
+        <div class="lang-box">
+          <span class="lang-opt active">FR</span>
+          <span class="lang-opt">EN</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="char-hero">
+    <a class="back-link" href="../index.html">&#9664; RETOUR</a>
+
+    <div class="char-top">
+      <div class="char-portrait">
+        <div class="soul soul-big determination"></div>
+      </div>
+      <div class="char-id">
+        <div class="char-name">ALIENOR</div>
+        <div class="char-tags">
+          <span class="char-tag">AME : DETERMINATION</span>
+          <span class="char-tag">TOILES ET LAMES</span>
+          <span class="char-tag">CHERCHE SA PLACE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="char-box">
+      <p>Combattante agile, Aliénor manie toiles et lames avec une grâce féroce. Derrière son assurance au combat se cache une quête plus personnelle : trouver où est réellement sa place dans ce monde en guerre.</p>
+      <p>Inséparable de Haloïs, elle veille sur lui autant qu'il veille sur elle.</p>
+    </div>
+
+    <div class="char-note">Plus de détails à venir au fil du développement.</div>
+
+    <div class="char-nav-between">
+      <a class="cta" href="boris.html">&#9664; BORIS « DA BRO »</a>
+      <a class="cta" href="elsira.html">ELSIRA GARDENER &#9654;</a>
+    </div>
+  </div>
+
+  <footer>
+    Rejoignez la communauté
+    <div class="socials">
+      <a href="https://discord.gg/Md4gQpdwG6">DISCORD</a>
+      <a href="https://www.youtube.com/@NoxaTry">YOUTUBE</a>
+      <a href="https://www.tiktok.com/@noxatrytalesofthewar">TIKTOK</a>
+      <a href="https://www.instagram.com/noxatry/">INSTAGRAM</a>
+      <a href="https://x.com/NoxaTryTOTW">X</a>
+      <a href="https://bsky.app/profile/noxatrytotw.bsky.social">BLUESKY</a>
+    </div>
+  </footer>
+
+  <script>
+    var toggle = document.getElementById('menuToggle');
+    var items = document.getElementById('navItems');
+    var arrow = document.getElementById('menuArrow');
+    toggle.addEventListener('click', function(){
+      var isOpen = items.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+      arrow.textContent = isOpen ? '▲' : '▼';
+    });
+  </script>
+
+</body>
+</html>
