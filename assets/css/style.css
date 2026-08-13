@@ -17,6 +17,9 @@
   /* ===== HEADER — logo + nav + langue, aligné en une seule barre ===== */
   .page-header{
     padding: 18px 24px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Passe au-dessus du contenu */
   }
   .header-bar{
     max-width: 1080px;
