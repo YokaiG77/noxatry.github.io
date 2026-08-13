@@ -12,7 +12,6 @@
     font-family: 'VT323', monospace;
     color: var(--white);
     min-height: 100vh;
-    image-rendering: pixelated;
   }
 
   /* ===== HEADER — logo + nav + langue, aligné en une seule barre ===== */
