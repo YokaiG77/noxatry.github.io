@@ -419,3 +419,117 @@
     display:block;
     margin-bottom: 14px;
   }
+
+  /* ===== PAGE EQUIPE ===== */
+  .team-hero{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 24px 80px;
+  }
+  .team-heading{
+    font-family:'Press Start 2P', monospace;
+    font-size: 20px;
+    color: var(--white);
+    text-align:center;
+    margin-bottom: 14px;
+  }
+  .team-intro{
+    text-align:center;
+    font-size: 24px;
+    color: #d8cdf0;
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+  .recruit-box{
+    border: 3px solid var(--orange);
+    background: var(--black);
+    padding: 22px 26px;
+    max-width: 640px;
+    margin: 0 auto 60px;
+    text-align:center;
+  }
+  .recruit-box .recruit-label{
+    font-family:'Press Start 2P', monospace;
+    font-size: 12px;
+    color: var(--orange);
+    margin-bottom: 14px;
+  }
+  .recruit-roles{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-bottom: 14px;
+  }
+  .recruit-roles span{
+    font-family:'Press Start 2P', monospace;
+    font-size: 9px;
+    border: 2px solid var(--white);
+    padding: 6px 10px;
+  }
+  .recruit-box .recruit-note{ font-size: 20px; color: #b9aed6; }
+  .team-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 22px;
+  }
+  .team-card{
+    background: var(--black);
+    border: 3px solid var(--white);
+    padding: 20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .team-avatar{
+    width: 64px;
+    height: 64px;
+    border: 2px solid var(--orange);
+    border-radius: 50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Press Start 2P', monospace;
+    font-size: 18px;
+    color: var(--orange);
+    flex-shrink:0;
+  }
+  .team-name{
+    font-family:'Press Start 2P', monospace;
+    font-size: 13px;
+    color: var(--white);
+  }
+  .team-role{
+    font-family:'Press Start 2P', monospace;
+    font-size: 9px;
+    color: var(--orange);
+  }
+  .team-desc{
+    font-size: 20px;
+    color: #d8cdf0;
+    line-height:1.4;
+  }
+  .team-desc.tbd{ color: rgba(216,205,240,0.45); font-style:italic; }
+  .team-socials{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 8px;
+    margin-top:auto;
+    padding-top: 8px;
+  }
+  .team-socials a{
+    font-family:'Press Start 2P', monospace;
+    font-size: 8px;
+    color: var(--white);
+    text-decoration:none;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 5px 7px;
+    opacity: 0.8;
+  }
+  .team-socials a:hover{ color: var(--orange); border-color: var(--orange); opacity:1; }
+  .team-socials span.tbd{
+    font-family:'Press Start 2P', monospace;
+    font-size: 8px;
+    color: rgba(255,255,255,0.35);
+    padding: 5px 0;
+  }
