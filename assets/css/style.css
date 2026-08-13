@@ -21,10 +21,11 @@
     align-items:flex-start;
     gap: 20px;
     padding: 18px 24px 0;
+    position: relative;
   }
   .site-logo{
-    width: 64px;
-    height: 64px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     border: 3px solid var(--orange);
     background: var(--deep);
@@ -49,7 +50,7 @@
     max-width: 820px;
     width:100%;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   .nav-items{
     display:flex;
@@ -81,12 +82,17 @@
   .nav-item:hover{ color: var(--orange); }
 
   .lang-box{
+    position: absolute;
+    top: 18px;
+    right: 24px;
     font-family:'Press Start 2P', monospace;
     font-size: 10px;
     border: 3px solid var(--white);
+    background: var(--black);
     padding: 8px 10px;
     display:flex;
     gap:10px;
+    z-index: 5;
   }
   .lang-opt{ cursor:pointer; opacity:0.5; }
   .lang-opt.active{ opacity:1; color:var(--orange); }
@@ -265,10 +271,10 @@
       gap: 12px;
       padding: 16px 16px 0;
     }
-    .site-logo{ width: 56px; height: 56px; }
+    .site-logo{ width: 68px; height: 68px; }
     .nav-wrap{ width:100%; }
     .nav-box{ flex-direction:column; align-items:stretch; padding: 14px 16px; }
-    .lang-box{ align-self:center; font-size:9px; padding:6px 8px; }
+    .lang-box{ top: 14px; right: 14px; font-size:9px; padding:6px 8px; }
     .mobile-toggle{
       display:flex;
       align-items:center;
@@ -294,7 +300,6 @@
     }
     .nav-items.open{ max-height:400px; margin-bottom:10px; }
     .nav-item{ padding: 12px 4px; border-top: 1px solid rgba(255,255,255,0.15); justify-content:center; }
-    .lang-box{ order: 1; }
   }
 
   /* ===== PAGE PERSONNAGE ===== */
