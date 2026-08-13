@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NoxaTry — Undertale: Tales of the War</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <img class="site-logo" src="assets/images/NoxaTry_logo.png" alt="NoxaTry">
+    <nav class="nav-wrap">
+      <div class="nav-box">
+        <button class="mobile-toggle" id="menuToggle" aria-expanded="false" aria-controls="navItems">
+          <span id="menuArrow">▼</span> MENU
+        </button>
+        <div class="nav-items" id="navItems">
+          <a class="nav-item active" href="index.html"><span class="cursor"></span>ACCUEIL</a>
+          <a class="nav-item" href="jeu.html"><span class="cursor"></span>JEU</a>
+          <a class="nav-item" href="equipe.html"><span class="cursor"></span>EQUIPE</a>
+          <a class="nav-item" href="devlog.html"><span class="cursor"></span>DEVLOG</a>
+          <a class="nav-item" href="contact.html"><span class="cursor"></span>CONTACT</a>
+        </div>
+        <div class="lang-box">
+          <span class="lang-opt active">FR</span>
+          <span class="lang-opt">EN</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div class="logo-mark">NOXATRY</div>
+    <img class="title-logo" src="assets/images/TOTWicon.png" alt="Undertale: Tales of the War">
+    <p class="tagline">Sept enfants. Une guerre oubliée. Un fangame créé avec passion par la NoxaTry.</p>
+    <div class="cta-row">
+      <a class="cta primary" href="#">REJOINDRE LE DISCORD</a>
+      <a class="cta" href="devlog.html">VOIR LE DEVLOG</a>
+    </div>
+  </section>
+
+  <div class="story-wrap">
+    <div class="story-box">
+      Undertale: Tales of the War plonge sept enfants au cœur du conflit originel entre humains et monstres. Explorez la surface, découvrez les origines de la guerre... et peut-être, trouvez le moyen d'y mettre fin.
+      <div class="arrow">▼</div>
+    </div>
+  </div>
+
+  <div class="souls-wrap">
+    <div class="souls-label">SEPT AMES, SEPT DESTINS</div>
+    <div class="souls-row">
+      <a class="soul-link" href="personnages/gwenn.html"><span class="soul-name">GWENN</span><div class="soul patience"></div></a>
+      <a class="soul-link" href="personnages/claire.html"><span class="soul-name">CLAIRE</span><div class="soul integrity"></div></a>
+      <a class="soul-link" href="personnages/jasper.html"><span class="soul-name">JASPER</span><div class="soul perseverance"></div></a>
+      <a class="soul-link" href="personnages/boris.html"><span class="soul-name">BORIS</span><div class="soul bravery"></div></a>
+      <a class="soul-link" href="personnages/alienor.html"><span class="soul-name">ALIENOR</span><div class="soul determination"></div></a>
+      <a class="soul-link" href="personnages/elsira.html"><span class="soul-name">ELSIRA</span><div class="soul kindness"></div></a>
+      <a class="soul-link" href="personnages/halois.html"><span class="soul-name">HALOIS</span><div class="soul justice"></div></a>
+    </div>
+  </div>
+
+  <div class="stat-wrap">
+    <div class="stat-box">
+      <div class="label">OBJECTIF ACTUEL</div>
+      <div class="value">Démo jouable pour l'UnderEvent</div>
+    </div>
+  </div>
+
+  <footer>
+    Rejoignez la communauté
+    <div class="socials">
+      <a href="https://discord.gg/Md4gQpdwG6">DISCORD</a>
+      <a href="https://www.youtube.com/@NoxaTry">YOUTUBE</a>
+      <a href="https://www.tiktok.com/@noxatrytalesofthewar">TIKTOK</a>
+      <a href="https://www.instagram.com/noxatry/">INSTAGRAM</a>
+      <a href="https://x.com/NoxaTryTOTW">X</a>
+      <a href="https://bsky.app/profile/noxatrytotw.bsky.social">BLUESKY</a>
+    </div>
+  </footer>
+
+  <script>
+    var toggle = document.getElementById('menuToggle');
+    var items = document.getElementById('navItems');
+    var arrow = document.getElementById('menuArrow');
+    toggle.addEventListener('click', function(){
+      var isOpen = items.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+      arrow.textContent = isOpen ? '▲' : '▼';
+    });
+  </script>
+
+</body>
+</html>
