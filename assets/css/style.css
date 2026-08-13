@@ -680,3 +680,33 @@
   }
   .contact-email a{ color: var(--orange); text-decoration:none; }
   .contact-email a:hover{ color: var(--white); }
+
+  /* ===== SYSTEME FR/EN ===== */
+  .i18n-en{ display:none; }
+  body.lang-en .i18n-fr{ display:none; }
+  body.lang-en .i18n-en{ display:revert; }
+
+  /* ===== BANDEROLE WIP ===== */
+  .wip-banner{
+    background: repeating-linear-gradient(
+      45deg,
+      var(--orange),
+      var(--orange) 12px,
+      var(--black) 12px,
+      var(--black) 24px
+    );
+    padding: 3px 0;
+  }
+  .wip-banner-inner{
+    background: var(--black);
+    margin: 3px 6px;
+    padding: 10px 16px;
+    text-align:center;
+    font-family:'Press Start 2P', monospace;
+    font-size: 10px;
+    color: var(--orange);
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 640px){
+    .wip-banner-inner{ font-size: 8px; padding: 10px 8px; }
+  }

@@ -10,6 +10,13 @@
 </head>
 <body>
 
+  <div class="wip-banner">
+    <div class="wip-banner-inner">
+      <span class="i18n-fr">* MAQUETTE EN COURS DE DEVELOPPEMENT — CECI N'EST PAS LE SITE FINAL *</span>
+      <span class="i18n-en">* WORK IN PROGRESS MOCKUP — THIS IS NOT THE FINAL SITE *</span>
+    </div>
+  </div>
+
   <div class="page-header">
     <img class="site-logo" src="../assets/images/NoxaTry_logo.png" alt="NoxaTry">
     <nav class="nav-wrap">
@@ -20,20 +27,20 @@
         <div class="nav-items" id="navItems">
           <a class="nav-item" href="../index.html"><span class="cursor"></span>ACCUEIL</a>
           <a class="nav-item" href="../jeu.html"><span class="cursor"></span>JEU</a>
-          <a class="nav-item" href="../equipe.html"><span class="cursor"></span>EQUIPE</a>
           <a class="nav-item" href="../devlog.html"><span class="cursor"></span>DEVLOG</a>
+          <a class="nav-item" href="../equipe.html"><span class="cursor"></span>EQUIPE</a>
           <a class="nav-item" href="../contact.html"><span class="cursor"></span>CONTACT</a>
         </div>
         <div class="lang-box">
-          <span class="lang-opt active">FR</span>
-          <span class="lang-opt">EN</span>
+          <span class="lang-opt active" data-lang="fr">FR</span>
+          <span class="lang-opt" data-lang="en">EN</span>
         </div>
       </div>
     </nav>
   </div>
 
   <div class="char-hero">
-    <a class="back-link" href="../index.html">&#9664; RETOUR</a>
+    <a class="back-link" href="../index.html">&#9664; <span class="i18n-fr">RETOUR</span><span class="i18n-en">BACK</span></a>
 
     <div class="char-top">
       <div class="char-portrait">
@@ -42,20 +49,22 @@
       <div class="char-id">
         <div class="char-name">ELSIRA GARDENER</div>
         <div class="char-tags">
-          <span class="char-tag">AME : GENTILLESSE</span>
-          <span class="char-tag">15 ANS</span>
-          <span class="char-tag">JARDINIERE</span>
-          <span class="char-tag">SOIGNEUSE</span>
+          <span class="char-tag"><span class="i18n-fr">AME : GENTILLESSE</span><span class="i18n-en">SOUL: KINDNESS</span></span>
+          <span class="char-tag"><span class="i18n-fr">15 ANS</span><span class="i18n-en">AGE 15</span></span>
+          <span class="char-tag"><span class="i18n-fr">JARDINIERE</span><span class="i18n-en">GARDENER</span></span>
+          <span class="char-tag"><span class="i18n-fr">SOIGNEUSE</span><span class="i18n-en">HEALER</span></span>
         </div>
         <div class="char-icons">
-          <div class="combat-icon-slot">ICONE<br>COMBAT</div>
+          <div class="combat-icon-slot"><span class="i18n-fr">ICONE<br>COMBAT</span><span class="i18n-en">COMBAT<br>ICON</span></div>
         </div>
       </div>
     </div>
 
     <div class="char-box placeholder">
-      <span class="placeholder-tag">[ BIO A REDIGER PAR L'EQUIPE ]</span>
-      <p>Cet espace accueillera la présentation du personnage une fois rédigée.</p>
+      <span class="placeholder-tag i18n-fr">[ BIO A REDIGER PAR L'EQUIPE ]</span>
+      <p class="i18n-fr">Cet espace accueillera la présentation du personnage une fois rédigée.</p>
+      <span class="placeholder-tag i18n-en">[ BIO TO BE WRITTEN BY THE TEAM ]</span>
+      <p class="i18n-en">This space will host the character's presentation once it's written.</p>
     </div>
 
     <div class="char-nav-between">
@@ -65,7 +74,7 @@
   </div>
 
   <footer>
-    Rejoignez la communauté
+    <span class="i18n-fr">Rejoignez la communauté</span><span class="i18n-en">Join the community</span>
     <div class="socials">
       <a href="https://discord.gg/Md4gQpdwG6" target="_blank" rel="noopener noreferrer">DISCORD</a>
       <a href="https://www.youtube.com/@NoxaTry" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
@@ -76,6 +85,7 @@
     </div>
   </footer>
 
+  <script src="../assets/js/i18n.js"></script>
   <script>
     var toggle = document.getElementById('menuToggle');
     var items = document.getElementById('navItems');
