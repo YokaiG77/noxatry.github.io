@@ -8,7 +8,7 @@
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
-    background: linear-gradient(180deg, var(--deep) 0%, var(--mid) 100%);
+    background-color: #221543;
     font-family: 'VT323', monospace;
     color: var(--white);
     min-height: 100vh;
