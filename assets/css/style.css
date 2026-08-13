@@ -384,3 +384,38 @@
     gap: 16px;
     flex-wrap:wrap;
   }
+
+  /* ===== ICONE DE COMBAT + PLACEHOLDER BIO ===== */
+  .char-top{
+    align-items: flex-start;
+  }
+  .char-icons{
+    display:flex;
+    gap:10px;
+    margin-top: 14px;
+  }
+  .combat-icon-slot{
+    width: 48px;
+    height: 48px;
+    border: 2px dashed rgba(255,255,255,0.35);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Press Start 2P', monospace;
+    font-size: 8px;
+    color: rgba(255,255,255,0.4);
+    text-align:center;
+    line-height:1.3;
+    flex-shrink:0;
+  }
+  .char-box.placeholder{
+    border-style: dashed;
+    color: rgba(242,240,248,0.55);
+  }
+  .char-box.placeholder .placeholder-tag{
+    font-family:'Press Start 2P', monospace;
+    font-size: 10px;
+    color: var(--orange);
+    display:block;
+    margin-bottom: 14px;
+  }
