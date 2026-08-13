@@ -1,0 +1,149 @@
+Guide du site NoxaTry — comment ça marche
+
+Ce document explique la structure du site pour que n'importe qui dans l'équipe puisse le reprendre en main, même sans connaissance approfondie du code.
+
+---
+
+1. C'est quoi, techniquement ?
+
+Un site 100% statique : uniquement des fichiers HTML/CSS/JS, aucune base de données, aucun serveur à gérer. Il est hébergé gratuitement sur GitHub Pages, à partir du repo `noxatry.github.io`.
+
+URL actuelle (test) : `https://yokaig77.github.io/noxatry.github.io/`
+Elle deviendra plus courte si on passe un jour le repo sous un compte/organisation nommé exactement `noxatry`, ou si on branche un nom de domaine personnalisé (ex. `noxatry.com`).
+
+---
+
+2. Arborescence des fichiers
+
+
+noxatry.github.io/
+├── index.html          → page Accueil
+├── jeu.html             → page Jeu
+├── devlog.html          → page Devlog
+├── equipe.html          → page Équipe
+├── contact.html         → page Contact
+├── personnages/
+│   ├── gwenn.html
+│   ├── claire.html
+│   ├── jasper.html
+│   ├── boris.html
+│   ├── alienor.html
+│   ├── elsira.html
+│   └── halois.html
+├── assets/
+│   ├── css/
+│   │   └── style.css    → TOUS les styles du site (un seul fichier)
+│   ├── js/
+│   │   └── i18n.js       → gère le switch de langue FR/EN
+│   └── images/
+│       ├── NoxaTry_logo.png
+│       └── TOTWicon.png
+└── GUIDE.md              → ce document
+
+
+Règle simple : une page = un fichier `.html`. Toutes les pages partagent le même `style.css`, donc modifier une couleur ou une police dans ce fichier change tout le site d'un coup.
+
+---
+
+3. Comment éditer le site (sans rien installer)
+
+1. Va sur le repo GitHub (`github.com/YokaiG77/noxatry.github.io`)
+2. Navigue jusqu'au fichier à modifier
+3. Clique sur l'icône crayon (✏️) en haut à droite du fichier
+4. Modifie le texte directement
+5. En bas de page, écris un message de commit (ex. "Ajout bio Gwenn") et clique Commit changes
+6. Le site se met à jour automatiquement en 1-2 minutes
+
+Après une modif : si le rendu semble cassé, c'est presque toujours un problème de cache. Ouvre le site en navigation privée (Ctrl+Shift+N) pour vérifier, ou force le rechargement (Ctrl+Shift+R).
+
+---
+
+4. Le système de langue FR/EN
+
+Chaque texte traduit est écrit deux fois dans le HTML, avec des classes `i18n-fr` et `i18n-en` :
+
+
+<p class="i18n-fr">Texte en français.</p>
+<p class="i18n-en">Text in English.</p>
+
+
+Le fichier `assets/js/i18n.js` affiche l'un ou l'autre selon le bouton FR/EN cliqué, et retient le choix du visiteur pour ses prochaines visites.
+
+Pour ajouter du texte traduit : dupliquer l'élément, garder le même texte de base, ajouter `i18n-fr` sur la version française et `i18n-en` sur la version anglaise. Si un texte n'a pas besoin d'être traduit (comme les noms des personnages), pas besoin de le dupliquer.
+
+---
+
+5. Ajouter/modifier une bio de personnage
+
+Ouvrir `personnages/[nom].html`. Chercher ce bloc :
+
+
+<div class="char-box placeholder">
+  <span class="placeholder-tag i18n-fr">[ BIO A REDIGER PAR L'EQUIPE ]</span>
+  <p class="i18n-fr">Cet espace accueillera la présentation du personnage une fois rédigée.</p>
+  <span class="placeholder-tag i18n-en">[ BIO TO BE WRITTEN BY THE TEAM ]</span>
+  <p class="i18n-en">This space will host the character's presentation once it's written.</p>
+</div>
+
+
+Remplacer par la vraie bio (retirer la classe `placeholder` sur le `char-box` et les `placeholder-tag`) :
+
+
+<div class="char-box">
+  <p class="i18n-fr">Ta bio en français ici.</p>
+  <p class="i18n-en">Your bio in English here.</p>
+</div>
+
+
+Pour l'icône de combat : chercher `<div class="combat-icon-slot">`, la remplacer par une balise `<img>` pointant vers l'image (à uploader dans `assets/images/` au préalable) :
+
+
+<img class="combat-icon-slot" src="../assets/images/icone-gwenn.png" alt="Icône de combat Gwenn">
+
+
+---
+
+6. Ajouter un article de Devlog
+
+Ouvrir `devlog.html`. Le fichier contient un modèle en commentaire juste avant le message "aucun article" — le copier et le remplir :
+
+
+<div class="devlog-entry">
+  <div class="devlog-date">13 AOUT 2026</div>
+  <div class="devlog-title">TITRE DE L'ARTICLE</div>
+  <p>Texte de l'article ici.</p>
+</div>
+
+
+Coller ce bloc avant les autres entrées (les plus récentes en premier). Si c'est le premier article, retirer le `<div class="devlog-empty">...</div>`.
+
+---
+
+7. La banderole "Maquette en cours"
+
+Un bandeau orange/noir en haut de chaque page rappelle que le site est en développement. Pour la retirer quand le site sera prêt à être officiellement lancé, supprimer ce bloc sur chaque page :
+
+
+<div class="wip-banner">
+  <div class="wip-banner-inner">
+    ...
+  </div>
+</div>
+
+
+---
+
+8. Nom de domaine (plus tard)
+
+Un domaine perso (`noxatry.com`, `noxatry.fr`...) coûte environ 10-15€/an, renouvelable chaque année (jamais un achat unique). À prévoir une fois que le contenu du site est finalisé, pour éviter de faire indexer par Google un site encore incomplet. Une fois acheté : configuration DNS chez le registrar + ajout dans Settings > Pages > Custom domain du repo GitHub.
+
+---
+
+9. Ce qui reste à faire
+
+- Rédiger les vraies bios des 7 personnages
+- Ajouter les icônes de combat de chaque personnage
+- Ajouter du contenu réel sur la page Jeu (captures d'écran, trailer)
+- Premiers articles de Devlog
+- Compléter les réseaux sociaux manquants sur la page Équipe (plusieurs sont encore en "à venir")
+- Décider d'un nom de domaine une fois le site prêt à être annoncé publiquement
