@@ -16,6 +16,11 @@
 
   /* ===== HEADER — logo + nav + langue, aligné en une seule barre ===== */
   .page-header{
+    background: linear-gradient(
+      to bottom,
+      rgba(34, 21, 67, 1) 70%,  /* Le #221543 reste opaque jusqu'à 30% de la hauteur */
+      rgba(34, 21, 67, 0) 100%   /* Devient totalement transparent à partir de 70% */
+    );
     padding: 18px 24px 0;
     position: sticky;
     top: 0;
@@ -526,6 +531,7 @@
     font-family:'Press Start 2P', monospace;
     font-size: 9px;
     color: var(--orange);
+    line-height: 2;
   }
   .team-desc{
     font-size: 20px;
