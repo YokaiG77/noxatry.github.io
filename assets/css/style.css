@@ -14,6 +14,13 @@
     min-height: 100vh;
   }
 
+  /* Le site a été conçu en visant un rendu à 125% de zoom navigateur :
+     on applique ce zoom par défaut sur desktop/tablette. Le mobile
+     (sous 641px) garde son échelle 100% déjà pensée pour petit écran. */
+  @media (min-width: 641px){
+    body{ zoom: 1.25; }
+  }
+
   /* ===== HEADER — logo + nav + langue, aligné en une seule barre ===== */
   .page-header{
     background: linear-gradient(
