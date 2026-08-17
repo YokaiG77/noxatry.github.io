@@ -15,6 +15,10 @@
     --text-body: #f2f0f8;
     --text-soft: #d8cdf0;
     --text-muted: #b9aed6;
+
+    /* Bordure pointillée des encadrés "à venir" (icône combat, capture,
+       devlog vide) */
+    --dashed: rgba(255,255,255,0.35);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
@@ -58,6 +62,39 @@
     margin-bottom: 40px;
   }
   .page-heading.tight{ margin-bottom: 14px; }
+
+  /* ===== PANELS — fond noir + bordure, factorisés par couleur/épaisseur =====
+     Regroupe ce que nav-box / lang-box / stat-box / team-card / contact-item /
+     recruit-box / feature-card ont en commun (fond + bordure), pour ne
+     changer le style des encadrés du site qu'à un seul endroit. Chaque
+     classe garde ensuite uniquement son padding / sa mise en page propres,
+     définis plus bas dans la section de sa page. */
+  .nav-box, .lang-box, .stat-box, .team-card, .contact-item,
+  .recruit-box, .feature-card{
+    background: var(--black);
+    border-style: solid;
+  }
+  .nav-box, .lang-box, .stat-box, .team-card, .contact-item{
+    border-color: var(--white);
+  }
+  .recruit-box, .feature-card{
+    border-color: var(--orange);
+  }
+  .nav-box{ border-width: 4px; }
+  .lang-box, .stat-box, .team-card, .recruit-box{ border-width: 3px; }
+  .contact-item, .feature-card{ border-width: 2px; }
+
+  /* ===== PILLS — petites étiquettes bordées (tags perso, rôles recherchés) === */
+  .char-tag, .recruit-roles span{
+    font-family: var(--font-pixel);
+    font-size: 9px;
+    border: 2px solid var(--white);
+    padding: 6px 10px;
+  }
+  .char-tag{
+    border-color: var(--orange);
+    color: var(--orange);
+  }
 
   /* ===== HEADER — logo + nav + langue, aligné en une seule barre ===== */
   .page-header{
@@ -104,8 +141,6 @@
     justify-content:center;
   }
   .nav-box{
-    background: var(--black);
-    border: 4px solid var(--white);
     box-shadow: 0 0 0 4px var(--black), 6px 6px 0 0 rgba(0,0,0,0.4);
     padding: 14px 18px;
     display:flex;
@@ -150,8 +185,6 @@
     justify-self: end;
     font-family: var(--font-pixel);
     font-size: 10px;
-    border: 3px solid var(--white);
-    background: var(--black);
     padding: 8px 10px;
     display:flex;
     gap:10px;
@@ -208,7 +241,8 @@
   .cta:hover{ border-color: var(--orange); color: var(--orange); }
   .cta.primary{ background: var(--orange); color: var(--black); border-color:var(--orange); }
   .cta.primary:before{ color: var(--black); }
-  .cta.primary:hover{ background:var(--white); }
+  .cta.primary:hover{ background:var(--white); border-color:var(--white); color:var(--black); }
+  .cta.lg{ font-size: 14px; padding: 20px 30px; }
 
   /* ===== DIALOGUE BOX narrative ===== */
   .story-wrap{ padding: 20px 24px 60px; display:flex; justify-content:center; }
@@ -285,8 +319,6 @@
   /* ===== STAT BOX objectif ===== */
   .stat-wrap{ display:flex; justify-content:center; padding: 0 24px 60px; }
   .stat-box{
-    border: 3px solid var(--white);
-    background: var(--black);
     padding: 20px 26px;
     max-width: 600px;
     width:100%;
@@ -419,13 +451,6 @@
     gap:10px;
     flex-wrap:wrap;
   }
-  .char-tag{
-    font-family: var(--font-pixel);
-    font-size: 9px;
-    border: 2px solid var(--orange);
-    color: var(--orange);
-    padding: 6px 10px;
-  }
   .char-box{
     margin-bottom: 24px;
   }
@@ -454,7 +479,7 @@
   .combat-icon-slot{
     width: 48px;
     height: 48px;
-    border: 2px dashed rgba(255,255,255,0.35);
+    border: 2px dashed var(--dashed);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -491,8 +516,6 @@
     margin: 0 auto 40px;
   }
   .recruit-box{
-    border: 3px solid var(--orange);
-    background: var(--black);
     padding: 22px 26px;
     max-width: 640px;
     margin: 0 auto 60px;
@@ -511,12 +534,6 @@
     justify-content:center;
     margin-bottom: 14px;
   }
-  .recruit-roles span{
-    font-family: var(--font-pixel);
-    font-size: 9px;
-    border: 2px solid var(--white);
-    padding: 6px 10px;
-  }
   .recruit-box .recruit-note{ font-size: 20px; color: var(--text-muted); }
   .team-grid{
     display:flex;
@@ -524,8 +541,6 @@
     gap: 20px;
   }
   .team-card{
-    background: var(--black);
-    border: 3px solid var(--white);
     padding: 24px 28px;
     display:flex;
     flex-direction:row;
@@ -631,8 +646,6 @@
     margin-bottom: 30px;
   }
   .feature-card{
-    border: 2px solid var(--orange);
-    background: var(--black);
     padding: 18px 20px;
   }
   .feature-card h4{
@@ -649,7 +662,7 @@
   }
   .media-slot{
     aspect-ratio: 16/9;
-    border: 2px dashed rgba(255,255,255,0.35);
+    border: 2px dashed var(--dashed);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -687,7 +700,7 @@
     text-align:center;
     font-size: 22px;
     color: var(--text-muted);
-    border: 2px dashed rgba(255,255,255,0.3);
+    border: 2px dashed var(--dashed);
     padding: 40px 24px;
   }
 
@@ -703,20 +716,14 @@
     color: var(--text-soft);
     margin-bottom: 40px;
   }
+  /* .contact-discord n'est plus qu'un habillage de mise en page : les
+     couleurs/bordure/police viennent de .cta.primary.lg (voir plus haut,
+     section HERO). Ce bouton est inline (au lieu du flex par défaut de
+     .cta) pour rester centré par le text-align:center de .contact-hero. */
   .contact-discord{
     display:inline-flex;
-    align-items:center;
-    gap:12px;
-    font-family: var(--font-pixel);
-    font-size: 14px;
-    background: var(--orange);
-    color: var(--black);
-    border: 3px solid var(--orange);
-    padding: 20px 30px;
-    text-decoration:none;
     margin-bottom: 40px;
   }
-  .contact-discord:hover{ background: var(--white); border-color: var(--white); }
   .contact-grid{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -724,8 +731,6 @@
     margin-bottom: 40px;
   }
   .contact-item{
-    border: 2px solid var(--white);
-    background: var(--black);
     padding: 18px;
     text-decoration:none;
     color: var(--white);
