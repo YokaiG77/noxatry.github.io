@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <!-- ===== BANDEROLE "EN CONSTRUCTION" ===== -->
   <div class="wip-banner">
     <div class="wip-banner-inner">
       <span class="i18n-fr">* MAQUETTE EN COURS DE DEVELOPPEMENT — CECI N'EST PAS LE SITE FINAL *</span>
@@ -17,6 +18,7 @@
     </div>
   </div>
 
+  <!-- ===== HEADER : LOGO + NAV + LANGUE ===== -->
   <div class="page-header">
     <div class="header-bar">
       <img class="site-logo" src="assets/images/NoxaTry_logo.png" alt="NoxaTry">
@@ -41,19 +43,21 @@
     </div>
   </div>
 
+  <!-- ===== HERO : LOGO DU JEU + ACCROCHE + BOUTONS ===== -->
   <section class="hero">
     <img class="title-logo fadein-titre" src="assets/images/TOTWicon.png" alt="Undertale: Tales of the War">
-    <p class="tagline i18n-fr">Sept enfants. Une guerre oubliée.
+    <p class="lead tagline i18n-fr">Sept enfants. Une guerre oubliée.
     <br>Un fangame créé avec passion par la NoxaTry.</p>
-    <p class="tagline i18n-en">
+    <p class="lead tagline i18n-en">
       Seven children. A forgotten war.
       <br>A fangame crafted with passion by NoxaTry.</p>
-    <div class="cta-row">
+    <div class="chip-row cta-row">
       <a class="cta animationobmredeplacement" href="https://discord.gg/Md4gQpdwG6" target="_blank" rel="noopener noreferrer"><span class="i18n-fr">REJOINDRE LE DISCORD</span><span class="i18n-en">JOIN THE DISCORD</span></a>
       <a class="cta animationobmredeplacement" href="devlog.html"><span class="i18n-fr">VOIR LE DEVLOG</span><span class="i18n-en">SEE THE DEVLOG</span></a>
     </div>
   </section>
 
+  <!-- ===== BOITE DE DIALOGUE : pitch du jeu ===== -->
   <div class="story-wrap">
     <div class="text-box story-box">
       <span class="i18n-fr">Undertale: Tales of the War plonge sept enfants au cœur du conflit originel entre humains et monstres. Explorez la surface, découvrez les origines de la guerre... et peut-être, trouvez le moyen d'y mettre fin.</span>
@@ -61,10 +65,10 @@
     </div>
   </div>
 
-
+  <!-- ===== TEASER DES 7 AMES (personnages) ===== -->
     <div class="souls-wrap">
       <div class="souls-label"><span class="i18n-fr">SEPT AMES, SEPT DESTINS</span><span class="i18n-en">SEVEN SOULS, SEVEN FATES</span></div>
-      <div class="souls-row">
+      <div class="chip-row souls-row">
         <a class="soul-link" href="personnages/nobody-yet.html"><span class="soul-name">???</span><div class="soul patience"></div></a>
         <a class="soul-link" href="personnages/nobody-yet.html"><span class="soul-name">???</span><div class="soul integrity"></div></a>
         <a class="soul-link" href="personnages/nobody-yet.html"><span class="soul-name">???</span><div class="soul perseverance"></div></a>
@@ -92,6 +96,7 @@
   </div>
 -->
 
+  <!-- ===== OBJECTIF ACTUEL ===== -->
   <div class="stat-wrap">
     <div class="stat-box">
       <div class="label"><span class="i18n-fr">OBJECTIF ACTUEL</span><span class="i18n-en">CURRENT GOAL</span></div>
@@ -99,10 +104,15 @@
     </div>
   </div>
 
+  <!-- ===== FOOTER : RESEAUX SOCIAUX ===== -->
+  <!-- Bug connu : les icônes ci-dessous utilisent des chemins Windows
+       (antislash) au lieu de "/", elles ne s'affichent donc pas sur
+       GitHub Pages. Pas touché ici (hors scope de ce nettoyage CSS),
+       voir le récap projet pour le détail. -->
   <footer>
     <span class="i18n-fr">Rejoignez la communauté</span><span class="i18n-en">Join the community</span>
     <div class="socials">
-      <a class= "footer-icon" href="https://discord.gg/Md4gQpdwG6" target="_blank" rel="noopener noreferrer"><img src="assets\images\discord-icon.png">DISCORD</a>
+      <a href="https://discord.gg/Md4gQpdwG6" target="_blank" rel="noopener noreferrer"><img src="assets\images\discord-icon.png">DISCORD</a>
       <a href="https://www.youtube.com/@NoxaTry" target="_blank" rel="noopener noreferrer"><img src="assets\images\youtube-icon.png">YOUTUBE</a>
       <a href="https://www.tiktok.com/@noxatrytalesofthewar" target="_blank" rel="noopener noreferrer"><img src="assets\images\tiktok-icon.png">TIKTOK</a>
       <a href="https://www.instagram.com/noxatry/" target="_blank" rel="noopener noreferrer"><img src="assets\images\instagram-icon.png">INSTAGRAM</a>
@@ -111,6 +121,7 @@
     </div>
   </footer>
 
+  <!-- ===== SCRIPT : MENU MOBILE ===== -->
   <script src="assets/js/i18n.js"></script>
   <script>
     var toggle = document.getElementById('menuToggle');
