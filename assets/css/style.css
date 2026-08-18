@@ -774,6 +774,46 @@ body.lang-en .i18n-en{
     filter: drop-shadow(4px 4px 0 var(--brown));}
   }
 
+
+  .embauche16{
+    animation-name: embauche16;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  .embauche48{
+    animation-name: embauche48;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  .embauche80{
+    animation-name: embauche80;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes embauche16{
+  0%,30%,100%{
+  box-shadow: 0px 0px 7px 0px rgba(243, 151, 51, 0);}
+  15%{
+  box-shadow: 0px 0px 20px 0px rgba(243, 151, 51, 127);}
+}
+  @keyframes embauche48{
+  0%,30%,60%,100%{
+  box-shadow: 0px 0px 7px 0px rgba(243, 151, 51, 0);}
+  45%{
+  box-shadow: 0px 0px 20px 0px rgba(243, 151, 51, 127);}
+}
+  @keyframes embauche80{
+  0%,60%,90%{
+  box-shadow: 0px 0px 7px 0px rgba(243, 151, 51, 0);}
+  75%{
+  box-shadow: 0px 0px 20px 0px rgba(243, 151, 51, 127);}
+}
+
   opacité-in{
 
   }
